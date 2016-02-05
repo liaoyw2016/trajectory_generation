@@ -2,7 +2,7 @@
 clc;
 clear all;
 pointStruct_2_matrix = @(ps) [ps.x(:)';ps.y(:)'];
-
+ 
 yaw_m_rot = @(theta) [[cos(theta),-sin(theta)];[sin(theta),cos(theta)]];
 yaw_p_rot = @(theta) (yaw_p_rot(theta))';
 
