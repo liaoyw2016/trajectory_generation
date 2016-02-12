@@ -9,6 +9,9 @@ function [arc_angle,direction] = get_arc_angle(R,px,py)
     % the first arc point corresponds to you driving forward
     % the second arc point corresponds to the later point where you are
     % heading in the complete opposite direction.
+    %Returns arc_angle and direction
+    % arc_angle is the degrees you must travel along the circle 
+    % direction is a string of ['invalid','straight','right','left']
     px2 = abs(px);
     if(sqrt((px2-R).^2+(py).^2)<R || (px==0 && py==0))
         %impossible to travel to this point
